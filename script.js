@@ -1,0 +1,20 @@
+let text = document.getElementById("text");
+let treeLeft = document.getElementById("tree-left");
+let treeRight = document.getElementById("tree-right");
+let gateLeft = document.getElementById("gate-left");
+let gateRight = document.getElementById("gate-right");
+
+
+
+window.addEventListener('scroll', function() {
+    // scroll position
+    var scrollPosition = window.scrollY;
+
+    // calculate the position 
+    var leftGatePosition = -282 + (scrollPosition * 0.5);
+    var rightGatePosition = 305 - (scrollPosition * 0.5);
+
+    document.getElementById('gate-left').style.transform = 'translateX(' + leftGatePosition + 'px)';
+    document.getElementById('gate-right').style.transform = 'translateX(' + rightGatePosition + 'px)';
+});
+
